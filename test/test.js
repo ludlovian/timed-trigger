@@ -35,10 +35,7 @@ function delay (ms) {
 
 function isResolved (p, ms = 10) {
   return new Promise((resolve, reject) => {
-    p.then(
-      v => resolve(true),
-      e => reject(e)
-    )
+    p.then(v => resolve(true), e => reject(e))
     setTimeout(() => resolve(false), ms)
   })
 }
